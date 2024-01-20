@@ -10,6 +10,7 @@
         <div class="yellowBar"></div>
 
         <nav id="navbar">
+            <ul>
                 <img id="logo" src="sunlife_logo.png" alt="Sun Life Logo">
                 <a href="main.html">Home</a>
                 <a href="contact_form.html">Contact</a>
@@ -25,16 +26,20 @@
             <div class="chatbox">
                 <div class="chat-container">
                     <div class="bot-message">Hello! How can I help you today?</div>
+
+                    <p id="output"></p>
                 </div>
 
                 <form class="chat-form">
                     <input id="textbox" type="text" placeholder="Type your message...">
-                    <input type="submit" value="Send">
+                    <div id="submitBtn">Send</div>
                 </form>
 
             </div>
         </div>
 
+
+        <script src="app.js"></script>
     </body>
 </html>
 
