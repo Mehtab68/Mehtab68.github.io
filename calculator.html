@@ -4,28 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SunLife Calculator</title>
-    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="in.css">
     <script src="calculator.js"></script>
 </head>
 <body>
+
     
-    <ul>
-        <li><a href="main.html">Home</a></li>
-        <li><a href="contact_from.html">Contact</a></li>
-        <li><a href="calculator.html">Calculator</a></li>
+  <div class="yellowBar"></div>
+
+  <nav id="navbar">
+          <img id="logo" src="sunlife_logo.png" alt="Sun Life Logo">
+          <a href="main.html">Home</a>
+          <a href="contact_form.html">Contact</a>
+          <a href="calculator.html">Inflation Calculator</a>
+          <a href="mortgage_calculator.html">Mortgage Calculator</a>
       </ul>
-
-      <h1>Choose your calculator</h1>
-
-      <select id="selector" onchange="calculator()">
-        <option>Select Your Desired Calcutor</option>
-        <option value="loan"> Loan Payment Calculator </option>
-        <option value="car"> Car Payment Calculator</option>
-        <option value="mortgage"> Mortgage Calculator </option>
-      </select>
+  </nav>
 
 
       <div id="calculator">
+
+        <div class="calculator-container">
+          <h1>Inflation Calculator</h1>
+  
+          <label for="calculationType">Calculation Type:</label>
+         
+  
+          <label for="initialAmount">Initial Amount:</label>
+          <input type="number" id="initialAmount" placeholder="Enter initial amount">
+          
+          <label for="inflationRate">Annual Inflation Rate (%):</label>
+          <input type="number" id="inflationRate" placeholder="Enter annual inflation rate">
+          
+          <label for="years">Number of Years:</label>
+          <input type="number" id="years" placeholder="Enter number of years">
+          
+          <button onclick="calculate()">Calculate</button>
+          
+          <div id="result"></div>
+          <canvas id="myChart"></canvas>
+      </div>
+      <script src="in.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
       </div>
 
