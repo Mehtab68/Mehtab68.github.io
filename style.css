@@ -16,7 +16,7 @@ body {
     width: 100%;
 }
 
-nav {
+#navbar {
     height: 40px;
     background-color: #ffffff;
     color: #333;
@@ -24,12 +24,12 @@ nav {
     text-align: center;
 }
 
-nav #logo {
+#navbar #logo {
     width: 10%;
     padding-right: 10%;
 }
 
-nav a {
+#navbar a {
     color: #333;
     font-weight: bold;
     font-size: 110%;
@@ -37,7 +37,7 @@ nav a {
     margin: 0 15px;
 }
 
-.main {
+.main-body {
     height: 500px;
     margin-top: 100px;
     padding: 20px;
@@ -49,12 +49,12 @@ nav a {
 }
 
 
-.main h1{
+.main-body h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #3d4142;
 }
 
-.main h1, .main p {
+.main-body h1, .main p {
     text-align: center;
 }
 
@@ -80,4 +80,48 @@ nav a {
 
 .chatbox .bot-message {
     padding-top: 5%;
+}
+
+.chat-form {
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* contact_form.html */
+.contact-body{
+    height: 500px;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-body h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #3d4142;
+}
+
+.contact-form{
+    width: 50%;
+    border: 1px solid #ccc;
+    margin-top: 2%;
+    padding: 2%;
+    background-color: #ffffff;
+}
+
+.contact-form input{
+    margin-bottom: 5%;
 }
