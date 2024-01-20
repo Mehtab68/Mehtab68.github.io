@@ -1,4 +1,4 @@
-const API_KEY = ''//add api key here
+const API_KEY = console.log(API_KEY);
 const submitBtn = document.querySelector('#SubmitBtn') //submit button for chat
 const output = document.querySelector('#output') //output message
 const input = document.querySelector('#input') //input text
