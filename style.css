@@ -1,0 +1,73 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url('sunlife_background.png');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+
+.yellowBar{
+    background-color: #ffcb05;
+    height: 5px; /* Adjust the height as needed */
+    width: 100%;
+}
+
+
+nav {
+    height: 40px;
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav #logo{
+    width: 15%;
+}
+
+nav a {
+    color: #333;
+    font-weight: bold;
+    font-size: 125%;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+
+.main {
+    max-width: 800px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main h1,p{
+    text-align: center;
+}
+
+.main .chatbox{
+    margin-top: 5%;
+    background-color: #f1f7f7;
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: groove;
+    border-radius: 5%;
+}
+
+.main .chatbox .bot-message{
+    padding-top: 5%;
+}
