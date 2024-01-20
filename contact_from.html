@@ -3,36 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>SunLife</title>
 </head>
 <body>
+    <div class="yellowBar"></div>
+
+        <nav>
+            <ul>
+                <img id="logo" src="sunlife_logo.png" alt="Sun Life Logo">
+                <a href="#">Home</a>
+                <a href="#">Contact</a>
+                <a href="calculator.html">Calculator</a>
+            </ul>
+        </nav>
+
+
     <div id="header">
-        <p align="center" style="color: red"><big>Insurance/Loan Quote Request Form</big></p>
-        <p style="color: purple">1. <span style="color: red">Full name</span></p>
-        <form action="https://formsubmit.co/c4e1c4686ef26aee4058cacac14c9b9e" method="POST">
-            <input type="text" style="color: rgb(49, 0, 128);" name="First name" placeholder="First name">
-            <input type="text" style="color: rgb(49, 0, 128);" name="Last name" placeholder="Last name">
+        <h1 style="color: red">Insurance/Loan Quote Request Form</h1>
 
-            <p style="color: purple;">2. <span style="color: red">What kind of Insurance are you interested in?</span></p>
+        <div id="contact-form">
+            
+            <form action="https://formsubmit.co/c4e1c4686ef26aee4058cacac14c9b9e" method="POST">
+                <p style="color: purple">1. <span style="color: red">Full name</span></p>
+                <input type="text" style="color: rgb(49, 0, 128);" name="First name" placeholder="First name">
+                <input type="text" style="color: rgb(49, 0, 128);" name="Last name" placeholder="Last name">
 
-            <input type="radio" name="type_of_Insurance_Loan" value="Student Loans/Debt"> Student Loans/Debt<br>
-            <input type="radio" name="type_of_Insurance_Loan" value="Mortgage"> Mortgage<br>
-            <input type="radio" name="type_of_Insurance_Loan" value="Car Payments"> Car Payments<br>
+                <p style="color: purple;">2. <span style="color: red">What kind of Insurance are you interested in?</span></p>
 
-            <p style="color: purple">3. <span style="color: red">What's your date of birth?</span></p>
+                <input type="radio" name="type_of_Insurance_Loan" value="Student Loans/Debt"> Student Loans/Debt<br>
+                <input type="radio" name="type_of_Insurance_Loan" value="Mortgage"> Mortgage<br>
+                <input type="radio" name="type_of_Insurance_Loan" value="Car Payments"> Car Payments<br>
 
-            <input type="date" style="color: rgb(49, 0, 128);" name="date_of_birth">
+                <p style="color: purple">3. <span style="color: red">What's your date of birth?</span></p>
 
-            <p style="color: purple">4. <span style="color: red">What's your profession?</span></p>
+                <input type="date" style="color: rgb(49, 0, 128);" name="date_of_birth">
 
-            <textarea style="color: rgb(49, 0, 128);" name="profession" rows="6" cols="40" placeholder="Enter your profession"></textarea>
+                <p style="color: purple">4. <span style="color: red">What's your profession?</span></p>
 
-            <p style="color: purple">5. <span style="color: red">Please provide email</span></p>
+                <textarea style="color: rgb(49, 0, 128);" name="profession" rows="6" cols="40" placeholder="Enter your profession"></textarea>
 
-            <input type="email" style="color: rgb(49, 0, 128);" name="email" placeholder="Your email">
+                <p style="color: purple">5. <span style="color: red">Please provide email</span></p>
 
-            <button type="submit">Send</button>
-        </form>
+                <input type="email" style="color: rgb(49, 0, 128);" name="email" placeholder="Your email">
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
