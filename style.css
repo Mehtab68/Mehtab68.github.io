@@ -81,27 +81,3 @@ nav a {
 .chatbox .bot-message {
     padding-top: 5%;
 }
-
-form {
-    margin-top: 10px;
-    position: absolute;
-    bottom: 10px;
-    width: calc(100% - 20px);
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-
-
-
-
-/* contact_form.html */
-#header{
-    background-color: #ffffff;
-}
-
-#contact-form{
-    background-color: #ffffff;
-}
