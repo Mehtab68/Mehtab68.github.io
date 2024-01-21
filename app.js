@@ -1,4 +1,4 @@
-const API_KEY = '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'//add api key here
+const API_KEY = ''//add api key here
 const input = document.querySelector('#textbox') //input text
 const submitButton = document.querySelector('#submitBtn') //submit button for chat
 const output = document.querySelector('#output') //output message
