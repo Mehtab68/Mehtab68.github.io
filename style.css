@@ -529,3 +529,21 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+body.budget-page h1,
+body.budget-page h2 {
+    padding-left: 10px; /* Adjust the value as needed */
+}
+
+body.budget-page .message {
+    padding-left: 10px; /* Adjust the value as needed */
+}
+
+body.budget-page .padded-paragraph {
+    padding-left: 10px; /* Adjust the value as needed */
+}
+
+#budgetTip {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+}

@@ -93,20 +93,20 @@ function updateChart() {
   
   // Budgeting tips
   const budgetTips = [
-    'Create a monthly budget to track your expenses.',
-    'Limit unnecessary expenses to save more money.',
-    'Consider using cash instead of cards to control spending.',
-    'Set financial goals to stay motivated.',
-    'Review your budget regularly and make adjustments as needed.',
-    'Follow the 50/30/20 rule: Allocate 50% to needs, 30% to wants, and 20% to savings.',
-    'Automate your savings by setting up automatic transfers to a separate account.',
-    'Shop smart by comparing prices and looking for discounts or coupons.',
-    'Build an emergency fund to cover unexpected expenses.',
-    'Track your spending to identify areas where you can cut costs.',
-    'Consider DIY options for things you can do yourself instead of paying for services.',
-    'Avoid impulse purchases by creating a shopping list and sticking to it.',
-    'Save for big purchases instead of relying on credit.',
-    'Plan your meals and groceries to minimize food waste and save money.',
+    ' Create a monthly budget to track your expenses.',
+    ' Limit unnecessary expenses to save more money.',
+    ' Consider using cash instead of cards to control spending.',
+    ' Set financial goals to stay motivated.',
+    ' Review your budget regularly and make adjustments as needed.',
+    ' Follow the 50/30/20 rule: Allocate 50% to needs, 30% to wants, and 20% to savings.',
+    ' Automate your savings by setting up automatic transfers to a separate account.',
+    ' Shop smart by comparing prices and looking for discounts or coupons.',
+    ' Build an emergency fund to cover unexpected expenses.',
+    ' Track your spending to identify areas where you can cut costs.',
+    ' Consider DIY options for things you can do yourself instead of paying for services.',
+    ' Avoid impulse purchases by creating a shopping list and sticking to it.',
+    ' Save for big purchases instead of relying on credit.',
+    ' Plan your meals and groceries to minimize food waste and save money.',
   ];
   
   // Function to display a random budgeting tip without repetition
