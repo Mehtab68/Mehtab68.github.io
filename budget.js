@@ -15,7 +15,8 @@ function updateChart() {
   
     budgetChart.data.datasets[0].data = dataValues;
     budgetChart.data.datasets[0].labels = percentages;
-    
+    budgetChart.data.datasets[0].subLabels = dataValues.map(value => `$${value.toFixed(2)}`);
+  
     // Calculate the total income and total expenses
     const totalIncome = income;
     const totalExpenses = Math.abs(housing) + Math.abs(utilities) + Math.abs(groceries) + Math.abs(entertainment) + Math.abs(miscellaneous);
@@ -82,15 +83,16 @@ function updateChart() {
             const dataset = data.datasets[tooltipItem.datasetIndex];
             const value = dataset.data[tooltipItem.index];
             const label = dataset.labels[tooltipItem.index];
-            return `${data.labels[tooltipItem.index]}%: $${value.toFixed(2)} (${label} of Income)`;
+            const subLabel = dataset.subLabels[tooltipItem.index];
+            return `${label}%: $${value.toFixed(2)} (${subLabel} of Income)`;
           },
         },
       },
     },
   });
   
- // Budgeting tips
-const budgetTips = [
+  // Budgeting tips
+  const budgetTips = [
     'Create a monthly budget to track your expenses.',
     'Limit unnecessary expenses to save more money.',
     'Consider using cash instead of cards to control spending.',
@@ -107,11 +109,21 @@ const budgetTips = [
     'Plan your meals and groceries to minimize food waste and save money.',
   ];
   
-  // Function to display a random budgeting tip
+  // Function to display a random budgeting tip without repetition
   function displayRandomTip() {
     const tipElement = document.getElementById('budgetTip');
-    const randomIndex = Math.floor(Math.random() * budgetTips.length);
-    tipElement.textContent = budgetTips[randomIndex];
+  
+    // Shuffle the tips array to ensure randomness
+    for (let i = budgetTips.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [budgetTips[i], budgetTips[j]] = [budgetTips[j], budgetTips[i]];
+    }
+  
+    // Display the first tip and move it to the end for the next iteration
+    const currentTip = budgetTips.pop();
+    budgetTips.unshift(currentTip);
+  
+    tipElement.textContent = currentTip;
   }
   
   // Initial update to calculate and display initial remaining budget
