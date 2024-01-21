@@ -10,7 +10,11 @@ function updateChart() {
     const messageElement = document.getElementById('message');
   
     // Update the chart data
-    budgetChart.data.datasets[0].data = [income, housing, utilities, groceries, entertainment, miscellaneous];
+    const dataValues = [income, housing, utilities, groceries, entertainment, miscellaneous];
+    const percentages = dataValues.map(value => ((value / income) * 100).toFixed(2));
+  
+    budgetChart.data.datasets[0].data = dataValues;
+    budgetChart.data.datasets[0].labels = percentages;
     
     // Calculate the total income and total expenses
     const totalIncome = income;
@@ -53,6 +57,7 @@ function updateChart() {
         'rgba(153, 102, 255, 1)',
       ],
       borderWidth: 1,
+      labels: ['0%', '0%', '0%', '0%', '0%', '0%'],
     }],
   };
   
@@ -68,9 +73,58 @@ function updateChart() {
         display: true,
         text: 'Monthly Budget Overview',
       },
+      legend: {
+        display: false,
+      },
+      tooltips: {
+        callbacks: {
+          label: function (tooltipItem, data) {
+            const dataset = data.datasets[tooltipItem.datasetIndex];
+            const value = dataset.data[tooltipItem.index];
+            const label = dataset.labels[tooltipItem.index];
+            return `${data.labels[tooltipItem.index]}%: $${value.toFixed(2)} (${label} of Income)`;
+          },
+        },
+      },
     },
   });
   
+ // Budgeting tips
+const budgetTips = [
+    'Create a monthly budget to track your expenses.',
+    'Limit unnecessary expenses to save more money.',
+    'Consider using cash instead of cards to control spending.',
+    'Set financial goals to stay motivated.',
+    'Review your budget regularly and make adjustments as needed.',
+    'Follow the 50/30/20 rule: Allocate 50% to needs, 30% to wants, and 20% to savings.',
+    'Automate your savings by setting up automatic transfers to a separate account.',
+    'Shop smart by comparing prices and looking for discounts or coupons.',
+    'Build an emergency fund to cover unexpected expenses.',
+    'Track your spending to identify areas where you can cut costs.',
+    'Consider DIY options for things you can do yourself instead of paying for services.',
+    'Avoid impulse purchases by creating a shopping list and sticking to it.',
+    'Save for big purchases instead of relying on credit.',
+    'Plan your meals and groceries to minimize food waste and save money.',
+  ];
+  
+  // Function to display a random budgeting tip
+  function displayRandomTip() {
+    const tipElement = document.getElementById('budgetTip');
+    const randomIndex = Math.floor(Math.random() * budgetTips.length);
+    tipElement.textContent = budgetTips[randomIndex];
+  }
+  
   // Initial update to calculate and display initial remaining budget
   updateChart();
+  
+  // Display a random budgeting tip
+  displayRandomTip();
+  
+  // Automatically update chart on input change
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', () => {
+      updateChart();
+      displayRandomTip();
+    });
+  });
   

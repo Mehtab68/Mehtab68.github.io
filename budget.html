@@ -19,6 +19,10 @@
     .negative {
       color: red;
     }
+
+    #tips {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -44,9 +48,13 @@
 
   <p id="message"></p>
 
-  <button onclick="updateChart()">Update Chart</button>
-
   <canvas id="budgetChart" width="600" height="400"></canvas>
+
+  <div id="tips">
+    <h2>Budgeting Tips</h2>
+    <p id="budgetTip"></p>
+  </div>
+
   <script src="budget.js"></script>
 </body>
 </html>
