@@ -455,3 +455,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.Information{
+    margin-left: 100px;
+}
