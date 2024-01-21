@@ -1,5 +1,16 @@
 var chart;  // Declare the chart variable outside of the function
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listeners to input elements
+    document.getElementById('principal').addEventListener('input', calculateCompoundInterest);
+    document.getElementById('interestRate').addEventListener('input', calculateCompoundInterest);
+    document.getElementById('compoundingFrequency').addEventListener('input', calculateCompoundInterest);
+    document.getElementById('years').addEventListener('input', calculateCompoundInterest);
+
+    // Initial calculation
+    calculateCompoundInterest();
+});
+
 function calculateCompoundInterest() {
     var principal = parseFloat(document.getElementById('principal').value);
     var interestRate = parseFloat(document.getElementById('interestRate').value);

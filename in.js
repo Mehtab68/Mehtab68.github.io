@@ -1,6 +1,14 @@
 var chart;  // Declare the chart variable outside of the function
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listeners to input elements
+    document.getElementById('initialAmount').addEventListener('input', calculateInflation);
+    document.getElementById('inflationRate').addEventListener('input', calculateInflation);
+    document.getElementById('years').addEventListener('input', calculateInflation);
 
+    // Initial calculation
+    calculateInflation();
+});
 
 function calculateInflation() {
     var initialAmount = parseFloat(document.getElementById('initialAmount').value);
@@ -45,54 +53,3 @@ function calculateInflation() {
         }
     });
 }
-
-
-
-// function calculateLoanPayment() {
-//     var loanAmount = parseFloat(document.getElementById('loanAmount').value);
-//     var annualInterestRate = parseFloat(document.getElementById('annualInterestRate').value);
-//     var loanPeriodInYears = parseInt(document.getElementById('loanPeriodInYears').value);
-
-//     var monthlyInterestRate = annualInterestRate / 100 / 12;
-//     var numberOfPayments = loanPeriodInYears * 12;
-
-//     var loanPayment = (monthlyInterestRate * loanAmount) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
-
-//     document.getElementById('result').innerHTML = 'The monthly loan payment is: ' + loanPayment.toFixed(2);
-
-//     // Create an array with the remaining loan balance for each month
-//     var data = [];
-//     var remainingBalance = loanAmount;
-//     for (var i = 0; i < numberOfPayments; i++) {
-//         remainingBalance = remainingBalance * (1 + monthlyInterestRate) - loanPayment;
-//         data.push(remainingBalance);
-//     }
-
-//     // Remove the old chart if it exists
-//     if (chart) {
-//         chart.destroy();
-//     }
-
-//     // Create the chart
-//     var ctx = document.getElementById('myChart').getContext('2d');
-//     chart = new Chart(ctx, {
-//         type: 'line',
-//         data: {
-//             labels: Array.from({length: numberOfPayments}, (_, i) => i + 1),  // Array from 1 to 'numberOfPayments'
-//             datasets: [{
-//                 label: 'Remaining loan balance',
-//                 data: data,
-//                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
-//                 borderColor: 'rgba(75, 192, 192, 1)',
-//                 borderWidth: 1
-//             }]
-//         },
-//         options: {
-//             scales: {
-//                 y: {
-//                     beginAtZero: true
-//                 }
-//             }
-//         }
-//     });
-// }
