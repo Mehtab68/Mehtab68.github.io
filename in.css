@@ -1,4 +1,4 @@
-body {
+calculator-container {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -45,4 +45,9 @@ button:hover {
 #result {
     margin-top: 20px;
     font-weight: bold;
+}
+
+#title{
+    text-align: center;
+    color: white;
 }

@@ -1,23 +1,5 @@
 var chart;  // Declare the chart variable outside of the function
 
-function calculate() {
-    var calculationType = document.getElementById('calculationType').value;
-
-    switch (calculationType) {
-        case 'inflation':
-            calculateInflation();
-            break;
-        case 'loan':
-            calculateLoanPayment();
-            break;
-        case 'car':
-            calculateCarPayment();
-            break;
-        case 'mortgage':
-            calculateMortgage();
-            break;
-    }
-}
 
 
 function calculateInflation() {
