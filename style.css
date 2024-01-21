@@ -503,3 +503,8 @@ body {
 .Information{
     margin-left: 100px;
 }
+
+.input-container {
+    padding-left: 10px; /* Adjust the value as needed */
+}
+
