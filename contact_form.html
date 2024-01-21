@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>SunLife</title>
 </head>
 <body>
@@ -25,31 +26,50 @@
         
         <div class="contact-form">
             <form action="https://formsubmit.co/c4e1c4686ef26aee4058cacac14c9b9e" method="POST">
-                <p style="color: purple">1. <span style="color: red">Full name</span></p>
-                <input type="text" style="color: rgb(49, 0, 128);" name="First name" placeholder="First name">
-                <input type="text" style="color: rgb(49, 0, 128);" name="Last name" placeholder="Last name">
 
-                <p style="color: purple;">2. <span style="color: red">What kind of Insurance are you interested in?</span></p>
+                <div class="full-name-div row">
+                    <div class="col">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                </div>
 
-                <input type="radio" name="type_of_Insurance_Loan" value="Student Loans/Debt"> Student Loans/Debt<br>
-                <input type="radio" name="type_of_Insurance_Loan" value="Mortgage"> Mortgage<br>
-                <input type="radio" name="type_of_Insurance_Loan" value="Car Payments"> Car Payments<br>
+                <select class="insurance-select-div">
+                <option selected>What kind of insurance are you interested in?</option>
+                <option value="Student Loans/Debt">Student Loans/Debt</option>
+                <option value="Mortgage">Mortgage</option>
+                <option value="Car Payments">Car Payments</option>
+                </select>
 
-                <p style="color: purple">3. <span style="color: red">What's your date of birth?</span></p>
+                <div class="date-of-birth-div">
+                    <p>What is your date of birth?</p>
+                    <input type="date" name="date_of_birth">
+                </div>
 
-                <input type="date" style="color: rgb(49, 0, 128);" name="date_of_birth">
+                <div class="current-position-div form-group">
+                    <label for="currentPosition">What is your current position?</label>
+                    <textarea class="form-control" id="profession" rows="3" placeholder="student, web developer, ..."></textarea>
+                </div>
 
-                <p style="color: purple">4. <span style="color: red">What's your profession?</span></p>
+                <div class="email-address-div form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+                </div>
 
-                <textarea style="color: rgb(49, 0, 128);" name="profession" rows="6" cols="40" placeholder="Enter your profession"></textarea>
+                <br>
 
-                <p style="color: purple">5. <span style="color: red">Please provide email</span></p>
-
-                <input type="email" style="color: rgb(49, 0, 128);" name="email" placeholder="Your email">
-
-                <button type="submit">Send</button>
+                <button type="submit" class="submit-button btn btn-primary mb-2">Submit</button>
             </form>
         </div>
+    </div>
+
+
+    <div class="footer">
+        <p>Sun Life</p>
     </div>
 </body>
 </html>

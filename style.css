@@ -99,7 +99,6 @@ body {
 
 /* contact_form.html */
 .contact-body{
-    height: 500px;
     margin-top: 100px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -120,8 +119,124 @@ body {
     margin-top: 2%;
     padding: 2%;
     background-color: #ffffff;
+    box-shadow: inset;
 }
 
 .contact-form input{
     margin-bottom: 5%;
+}
+
+.contact-form .full-name-div{
+    margin-bottom: 6%;
+}
+
+.contact-form .insurance-select-div{
+    margin-bottom: 8%;
+}
+
+.contact-form .date-of-birth-div{
+    margin-bottom: 3%;
+}
+
+.contact-form .current-position-div{
+    margin-bottom: 4%;
+}
+
+.contact-form .email-address-div{
+    margin-bottom: -3%;
+}
+
+.contact-form .submit-button{
+    width: 100%
+}
+
+.footer{
+    background-color: #184A58;
+    height: 90px;
+}
+
+.footer p{
+    color: #fff;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 375px){
+    #navbar{
+        height: 50px;
+    }
+
+    #navbar ul{
+        width: 100%;
+    }
+
+    #navbar a{
+        font-size: 80%;
+    }
+
+    .contact-body{
+        margin-top: 100px;
+    }
+
+    .contact-body h1{
+        font-size: 120%;
+    }
+
+    .contact-form{
+        width: 100%;
+        border: 1px solid #ccc;
+        margin-top: 2%;
+        padding: 2%;
+        background-color: #ffffff;
+        box-shadow: inset;
+    }
+
+    .contact-form label, p{
+        font-size: 90%;
+    }
+
+    .contact-form .insurance-select-div{
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px){
+
+    .yellowBar{
+        min-height: 1vh;
+    }
+
+    #navbar{
+        min-height: 10vh;
+    }
+
+    #navbar ul{
+        height: 100%;
+    }
+
+    #navbar ul a{
+        font-size: 150%;
+    }
+
+    .contact-body{
+        margin-top: 150px;
+    }
+
+    .contact-form{
+        width: 70%;
+        border: 1px solid #ccc;
+        margin-top: 2%;
+        padding: 2%;
+        background-color: #ffffff;
+        box-shadow: inset;
+    }
+
+    .footer{
+        min-height: 10vh;
+    }
 }
