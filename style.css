@@ -499,3 +499,7 @@ body {
 .submit-btn:hover {
     background-color: #ffa500; /* Change to the desired hover color */
 }
+
+.Information{
+    margin-left: 100px;
+}
