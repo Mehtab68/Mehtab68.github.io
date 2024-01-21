@@ -24,14 +24,14 @@ async function getMessage(){
         const response = await fetch('https://api.openai.com/v1/chat/completions', options)
         const data = await response.json()
         console.log(data)
-        // output.textContent = data.choices[0].message.content
-        // if (data.choices[0].message.content){
-        //     const pElement = document.createElement('p')
-        //     pElement.textContent = inputElement.value
-        //     history.append(pElement)
-        // }
+        output.textContent = data.choices[0].message.content
+        if (data.choices[0].message.content){
+            const pElement = document.createElement('p')
+            pElement.textContent = input.value
+            history.append(pElement)
+        }
     } catch (error){
-        console.error(error);
+        console.error(error)
     }
 }
 
