@@ -137,3 +137,12 @@ body {
 #initialAmount, #inflationRate, #years{
     width: 500px;
 }
+
+.Calculate-button{
+    position: relative;
+    left: 230px;
+}
+
+.top h2{
+    text-align: center;
+}
