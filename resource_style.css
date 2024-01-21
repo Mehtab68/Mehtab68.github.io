@@ -1,0 +1,17 @@
+.header-content {
+    margin-bottom: 150px;
+    color: rgb(38, 30, 30);
+    text-align: center;
+    font-size: 2vmin
+}
+
+
+.Information {
+    line-height: 5em;
+    font-size: 2vmin
+}
+
+.Video{
+    text-align: center;
+    font-size: 4vmin;
+}

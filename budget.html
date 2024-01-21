@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Budget Chart</title>
+  <!-- Include Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    canvas {
+      max-width: 600px;
+      margin: 20px;
+    }
+
+    .positive {
+      color: green;
+    }
+
+    .negative {
+      color: red;
+    }
+
+    #tips {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Monthly Budget Overview</h1>
+  <p>Use the chart below to visualize your monthly budget. Enter your income and expenses, and the chart will update accordingly.</p>
+
+  <label for="income">Income:</label>
+  <input type="number" id="income" value="3000">
+
+  <label for="housing">Housing:</label>
+  <input type="number" id="housing" value="1000">
+
+  <label for="utilities">Utilities:</label>
+  <input type="number" id="utilities" value="200">
+
+  <label for="groceries">Groceries:</label>
+  <input type="number" id="groceries" value="300">
+
+  <label for="entertainment">Entertainment:</label>
+  <input type="number" id="entertainment" value="100">
+
+  <label for="miscellaneous">Miscellaneous:</label>
+  <input type="number" id="miscellaneous" value="50">
+
+  <p id="message"></p>
+
+  <canvas id="budgetChart" width="600" height="400"></canvas>
+
+  <div id="tips">
+    <h2>Budgeting Tips</h2>
+    <p id="budgetTip"></p>
+  </div>
+
+  <script src="budget.js"></script>
+</body>
+</html>
