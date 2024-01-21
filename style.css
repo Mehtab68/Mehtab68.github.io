@@ -49,18 +49,15 @@ body {
 }
 
 
-.main-body h1{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #3d4142;
-}
+
 
 .main-body h1, .main p {
     text-align: center;
 }
 
 .chatbox {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 10px;
+    margin-bottom: 510px;
     background-color: #ffffff;
     width: 50%;
     height: 80%;
@@ -510,4 +507,9 @@ body {
 
 h1 {
     margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.input-chat {
+    display: flex; /* Makes the children elements line up in a row */
+    justify-content: space-between; /* Adds space between the elements */
 }
