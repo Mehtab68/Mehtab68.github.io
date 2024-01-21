@@ -447,3 +447,11 @@ body {
 .input-container, .graph-container {
     flex: 1;
 }
+
+.map {
+    padding-top: 20px; /* Adjust the value as needed */
+    padding-bottom: 20px; /* Adjust the value as needed */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
