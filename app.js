@@ -1,4 +1,8 @@
-const API_KEY = ''//add api key here
+import { OPENAI_API_KEY } from './api.js';
+
+
+
+const API_KEY = OPENAI_API_KEY//add api key here
 const input = document.querySelector('#textbox') //input text
 const submitButton = document.querySelector('#submitBtn') //submit button for chat
 const output = document.querySelector('#output') //output message
