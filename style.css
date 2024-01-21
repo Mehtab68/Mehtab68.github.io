@@ -360,70 +360,51 @@ body {
         left: 50px;
     }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.row {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    padding: 20px;
-    flex-wrap: nowrap; /* Ensure no wrapping */
-}
-
-.calbtn {
-    flex: 1; /* Make all columns equally flexible */
-    text-align: center;
-    justify-content: center;
-    padding: 10px; /* Adjust padding to decrease the height */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s;
-    cursor: pointer;
-    overflow: hidden;
-    line-height: 1.2;
-    margin-right: 5px; /* Add some spacing between columns */
-}
-
-.calbtn:last-child {
-    margin-right: 0; /* Remove margin-right for the last column */
-}
-
-.calbtn:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-    background-color: #fcdc58; /* Change to yellow color on hover */
-}
-
-.calbtn h1 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-
-.column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 400px; /* Set a maximum width */
-    margin: 100px auto; /* Center the container */
-    padding: 10px;
-    height: 500px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+    .row {
+        display: flex;
+        flex-direction: column; /* Change to column direction */
+        align-items: center;
+        margin-top: 20px;
+        padding: 20px;
+    }
+    
+    .calbtn {
+        width: 100%; /* Make the button take full width */
+        text-align: center;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s;
+        cursor: pointer;
+        overflow: hidden;
+        line-height: 1.2;
+        margin-bottom: 10px; /* Add spacing between buttons */
+    }
+    
+    .calbtn:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+        background-color: #fcdc58; /* Change to yellow color on hover */
+    }
+    
+    .calbtn h1 {
+        font-size: 1.5em;
+        margin: 0;
+        color: #333;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 400px; /* Set a maximum width */
+        margin: 100px auto; /* Center the container */
+        padding: 10px;
+        height: auto; /* Adjust height to auto */
+    }
 
 .center-container {
     display: flex;
@@ -454,4 +435,67 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+/* Add these styles to your existing stylesheet or create a new one */
+
+.main-body {
+    text-align: center;
+    padding: 20px;
+}
+
+.chatbox {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.bot-message {
+    background-color: #f0f0f0;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.input-chat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+#textbox {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px; /* Adjust the value as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.submit-btn {
+    background-color: #fcdc58;
+    color: #333;
+    padding: 15px 25px; /* Adjust the value as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #ffa500; /* Change to the desired hover color */
 }
