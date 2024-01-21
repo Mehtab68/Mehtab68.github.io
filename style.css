@@ -266,6 +266,68 @@ body {
     left: 50px;
 }
 
-.column h1{
-    text-align: center;
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+    flex-wrap: nowrap; /* Ensure no wrapping */
+}
+
+.calbtn {
+    flex: 1; /* Make all columns equally flexible */
+    text-align: center;
+    justify-content: center;
+    padding: 10px; /* Adjust padding to decrease the height */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 1.2;
+    margin-right: 5px; /* Add some spacing between columns */
+}
+
+.calbtn:last-child {
+    margin-right: 0; /* Remove margin-right for the last column */
+}
+
+.calbtn:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background-color: #fcdc58; /* Change to yellow color on hover */
+}
+
+.calbtn h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px; /* Set a maximum width */
+    margin: 100px auto; /* Center the container */
+    padding: 10px;
+    height: 500px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
