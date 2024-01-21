@@ -1,6 +1,5 @@
 .mortgage-calculator{
-
-    font-family: "Roboto", sans-serif;
+    border-radius: 10px; /* Adjust the value as needed */
     width: 600px;
     margin: 24px auto; 
     background: white;
@@ -13,9 +12,11 @@
 
 .mortgage-calculator .top{
 
-    background-color: orangered;
+    background-color: #ffcb05;
     color: #fff;
-    padding: 32px; 
+    padding: 32px;
+    border-top-left-radius: 10px; /* Adjust the value as needed */
+    border-top-right-radius: 10px; /* Adjust the value as needed */
 }
 
 .mortgage-calculator .top h2{
@@ -87,7 +88,7 @@
 
 .mortgage-calculator .Calculate-button{
 
-    background: #e63946;
+    background: #ffcb05;
     color: white;
     border: none;
     padding: 8px 32px;
@@ -98,5 +99,18 @@
     margin: 24px 0;
 }
 
+.mortgage-calculator form input {
+    border: 1px solid transparent; /* Makes the border transparent */
+    font-size: 20px;
+    padding: 12px 16px;
+    width: 70%; /* Adjust the value as needed */
+    margin: 0 auto; /* Centers the input box */
+    border-radius: 10px; /* Makes the corners round */
+    margin-bottom: 10px; /* Adds space below the input box */
+}
+
+h2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
 
 
