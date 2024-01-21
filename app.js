@@ -1,4 +1,4 @@
-const API_KEY = ''//add api key here
+const API_KEY = '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'//add api key here
 const input = document.querySelector('#textbox') //input text
 const submitButton = document.querySelector('#submitBtn') //submit button for chat
 const output = document.querySelector('#output') //output message
@@ -24,14 +24,14 @@ async function getMessage(){
         const response = await fetch('https://api.openai.com/v1/chat/completions', options)
         const data = await response.json()
         console.log(data)
-        // output.textContent = data.choices[0].message.content
-        // if (data.choices[0].message.content){
-        //     const pElement = document.createElement('p')
-        //     pElement.textContent = inputElement.value
-        //     history.append(pElement)
-        // }
+        output.textContent = data.choices[0].message.content
+        if (data.choices[0].message.content){
+            const pElement = document.createElement('p')
+            pElement.textContent = input.value
+            history.append(pElement)
+        }
     } catch (error){
-        console.error(error);
+        console.error(error)
     }
 }
 
