@@ -163,6 +163,31 @@ body {
 
 
 
+.column a{
+    font-size: 100%;
+}   
+
+#mortgageCalculatorImg{
+    margin-top: 30%;
+    width: 70%;
+}
+
+#interestRateCalculatorImg{
+    margin-top: 50%;
+    width: 70%;
+}
+
+#carPaymentCalculatorImg{
+    margin-top: 30%;
+    width: 80%;
+}
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 375px){
     #navbar{
@@ -170,7 +195,7 @@ body {
     }
 
     #navbar ul{
-        width: 100%;
+        width: 90%;
     }
 
     #navbar a{
@@ -200,6 +225,38 @@ body {
 
     .contact-form .insurance-select-div{
         width: 100%;
+    }
+
+    .calculator-row{
+        margin-top: 10%;
+    }
+
+    .column a{
+        font-size: 50%;
+    }
+
+    .column{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    #mortgageCalculatorImg{
+        margin-top: 10%;
+        margin-bottom: 20%;
+        width: 20%;
+    }
+
+    #interestRateCalculatorImg{
+        margin-top: 10%;
+        margin-bottom: 20%;
+        width: 20%;
+    }
+
+    #carPaymentCalculatorImg{
+        margin-top: 10%;
+        margin-bottom: 20%;
+        width: 20%;
     }
 }
 
@@ -239,33 +296,72 @@ body {
     .footer{
         min-height: 10vh;
     }
-#calculator{
-    margin-top: 100px;
-}
 
-.mortgage-calculator{
-    margin-top: 100px;
-}
 
-#initialAmount, #inflationRate, #years{
-    width: 500px;
-}
 
-.Calculate-button{
-    position: relative;
-    left: 230px;
-}
 
-.top h2{
-    text-align: center;
-}}
+    .column{
+        float: left;
+        width: 17%;
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 10%;
+        padding: 10px;
+    }
 
-#car{
-    width: 200px;
-    position: relative;
-    left: 50px;
-}
+    .column a{
+        font-size: 80%;
+    }
 
-.column h1{
-    text-align: center;
-}
+
+    .column img{
+        display: inline-block;
+        margin: auto;
+        width: 200px;
+    }
+
+    #mortgageCalculatorImg{
+        margin-top: 70%;
+        width: 80%;
+    }
+
+    #interestRateCalculatorImg{
+        margin-top: 50%;
+        width: 70%;
+    }
+
+    #carPaymentCalculatorImg{
+        margin-top: 30%;
+        width: 80%;
+    }
+
+    #calculator{
+        margin-top: 100px;
+    }
+
+    .mortgage-calculator{
+        margin-top: 100px;
+    }
+
+    #initialAmount, #inflationRate, #years{
+        width: 500px;
+    }
+
+    .Calculate-button{
+        position: relative;
+        left: 230px;
+    }
+
+    .top h2{
+        text-align: center;
+    }}
+
+    #car{
+        width: 200px;
+        position: relative;
+        left: 50px;
+    }
+
+    .column h1{
+        text-align: center;
+    }

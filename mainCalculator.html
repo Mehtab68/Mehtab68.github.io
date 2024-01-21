@@ -6,7 +6,7 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 
-    <style>
+    <!-- <style>
         
         
         .column {
@@ -25,7 +25,7 @@
   clear: both;
 }
 
-        </style>
+        </style> -->
 
 </head>
 <body>
@@ -42,20 +42,28 @@
     </nav>
     
 
-    <div class="row">
-        <a href="mortgage_calculator.html"><div class="column">
-            <h1>Mortgage Calculator</h1>
-          <img src="mortageCalculator.png" alt="mortgage_calculator">
-        </div></a>
-        <a href="calculator.html"><div class="column">
-          <h1>Interest Rate Calculator</h1>
-          <img src="loanPayment-removebg-preview (1).png" alt="loanPayment">
+    <div class="calculator-row">
+        <div class="column">
+          <a href="mortgage_calculator.html">
+          <h1>Mortgage Calculator</h1>
+          <img id="mortgageCalculatorImg" src="mortageCalculator.png" alt="mortgage_calculator">
+          </a>
         </div>
-        <a href=""><div class="column">
+
+        <div class="column">
+          <a href="calculator.html">
+          <h1>Interest Rate Calculator</h1>
+          <img id="interestRateCalculatorImg" src="loanPayment-removebg-preview (1).png" alt="loanPayment">
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="">
           <h1>Car Payment Calculator</h1>
-          <img id="car" src="trans-pict-car-value.png" alt="car-payment">
-        </div></a>
-      </div>
+          <img id="carPaymentCalculatorImg" src="trans-pict-car-value.png" alt="car-payment">
+          </a>
+        </div>
+    </div>
     
 </body>
 </html>
