@@ -258,4 +258,14 @@ body {
 
 .top h2{
     text-align: center;
+}}
+
+#car{
+    width: 200px;
+    position: relative;
+    left: 50px;
+}
+
+.column h1{
+    text-align: center;
 }
