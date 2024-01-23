@@ -238,10 +238,6 @@ body {
         margin-top: 100px;
     }
 
-    #initialAmount, #inflationRate, #years{
-        width: 500px;
-    }
-
     .Calculate-button{
         position: relative;
         left: 230px;
@@ -633,7 +629,7 @@ h2 {
 }
 
 #initialAmount, #inflationRate, #years, #principal, #interestRate, #payments, #compoundingFrequency,
-#initialDebt,#annualInterestRate,#monthlyPayment#income,#housing,#utilities,#groceries,#entertainment,#miscellaneous,#income {
+#initialDebt,#annualInterestRate,#monthlyPayment,#income,#housing,#utilities,#groceries,#entertainment,#miscellaneous,#income {
     border: 2px solid black; /* Add a black outline */
     border-radius: 15px; /* Increase the border radius */
 }
