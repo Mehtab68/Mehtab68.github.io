@@ -4,7 +4,7 @@
 }
 
 body {
-    
+    justify-content: space-between; /* Adds space between the calculator and the graph */
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
@@ -14,6 +14,7 @@ body {
     background-color: #ffcb05;
     height: 5px;
     width: 100%;
+    min-height: 1vh;
 }
 
 #navbar {
@@ -44,10 +45,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
-
-
-
 
 .main-body h1, .main p {
     text-align: center;
@@ -95,7 +94,6 @@ body {
     margin-top: 100px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,92 +173,6 @@ body {
     width: 80%;
 }
 
-
-
-
-
-
-
-
-@media only screen and (min-width: 375px){
-    #navbar{
-        height: 50px;
-    }
-
-    #navbar ul{
-        width: 90%;
-    }
-
-    #navbar a{
-        font-size: 80%;
-    }
-
-    .contact-body{
-        margin-top: 100px;
-    }
-
-    .contact-body h1{
-        font-size: 120%;
-    }
-
-    .contact-form{
-        width: 100%;
-        border: 1px solid #ccc;
-        margin-top: 2%;
-        padding: 2%;
-        background-color: #ffffff;
-        box-shadow: inset;
-    }
-
-    .contact-form label, p{
-        font-size: 90%;
-    }
-
-    .contact-form .insurance-select-div{
-        width: 100%;
-    }
-
-    .calculator-row{
-        margin-top: 10%;
-    }
-
-    .column a{
-        font-size: 50%;
-    }
-
-    .column{
-        width: 80%;
-        margin: auto;
-        text-align: center;
-    }
-
-    #mortgageCalculatorImg{
-        margin-top: 10%;
-        margin-bottom: 20%;
-        width: 20%;
-    }
-
-    #interestRateCalculatorImg{
-        margin-top: 10%;
-        margin-bottom: 20%;
-        width: 20%;
-    }
-
-    #carPaymentCalculatorImg{
-        margin-top: 10%;
-        margin-bottom: 20%;
-        width: 20%;
-    }
-}
-
-
-
-@media only screen and (min-width: 768px){
-
-    .yellowBar{
-        min-height: 1vh;
-    }
-
     #navbar{
         min-height: 10vh;
     }
@@ -285,13 +197,6 @@ body {
         background-color: #ffffff;
         box-shadow: inset;
     }
-
-    .footer{
-        min-height: 10vh;
-    }
-
-
-
 
     .column{
         float: left;
@@ -328,9 +233,6 @@ body {
         width: 80%;
     }
 
-    #calculator{
-        margin-top: 100px;
-    }
 
     .mortgage-calculator{
         margin-top: 100px;
@@ -347,7 +249,7 @@ body {
 
     .top h2{
         text-align: center;
-    }}
+    }
 
     #car{
         width: 200px;
@@ -413,6 +315,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 1;
 }
 
 .content-container {
@@ -420,9 +323,6 @@ body {
     justify-content: space-between;
 }
 
-.input-container, .graph-container {
-    flex: 1;
-}
 
 .map {
     padding-top: 20px; /* Adjust the value as needed */
@@ -431,8 +331,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
-/* Add these styles to your existing stylesheet or create a new one */
 
 .main-body {
     text-align: center;
@@ -547,3 +445,291 @@ body.budget-page .padded-paragraph {
     text-align: center;
     margin-top: 20px; /* Adjust as needed */
 }
+
+.calculator-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#title{
+    text-align: center;
+    color: white;
+}
+
+.mortgage-calculator{
+    border-radius: 10px; /* Adjust the value as needed */
+    width: 600px;
+    margin: 24px auto; 
+    background: white;
+    box-shadow: 0 12px 50px -11px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: #14213d;
+}
+
+
+
+.mortgage-calculator .top{
+
+    background-color: #ffcb05;
+    color: #fff;
+    padding: 32px;
+    border-top-left-radius: 10px; /* Adjust the value as needed */
+    border-top-right-radius: 10px; /* Adjust the value as needed */
+}
+
+.mortgage-calculator .top h2{
+    margin-top: 0;
+}
+
+.mortgage-calculator form{
+
+    display: flex;
+    gap: 12px; 
+    justify-content: space-between;
+}
+
+.mortgage-calculator .title{
+    margin-bottom: 16px;
+}
+
+.mortgage-calculator form input{
+    font-size: 20px;
+    padding: 12px 16px ;
+    width: 100%;
+}
+
+.mortgage-calculator .result{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mortgage-calculator .result .left{
+    width: 100%;
+    padding: 8px 32px;
+}
+
+.mortgage-calculator .total-mortgage .left{
+    width: 100%;
+    padding: 8px 32px;
+}
+
+
+.mortgage-calculator .total-Amount .left{
+    width: 100%;
+    padding: 8px 32px;
+}
+
+.mortgage-calculator .left h3{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.mortgage-calculator .newres .value{
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(20, 33, 61, 0.2)
+}
+
+
+
+.mortgage-calculator .newres .value::before{
+    content: "CA$";
+    font-size: 24px; 
+    font-weight: 400;
+    margin-right: 6px;
+    opacity: 0.4;
+}
+
+.mortgage-calculator .Calculate-button{
+
+    background: #ffcb05;
+    color: white;
+    border: none;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-size: 18px; 
+    font-weight: 900;
+    cursor: pointer;
+    margin: 24px 0;
+}
+
+.mortgage-calculator form input {
+    border: 1px solid transparent; /* Makes the border transparent */
+    font-size: 20px;
+    padding: 12px 16px;
+    width: 70%; /* Adjust the value as needed */
+    margin: 0 auto; /* Centers the input box */
+    border-radius: 10px; /* Makes the corners round */
+    margin-bottom: 10px; /* Adds space below the input box */
+}
+
+h2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+
+.graph-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the container takes up full height */
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#calculator, .graph-container {
+    flex: 1;
+    width: 50%;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.graph-container,.debtChart {
+    flex: 1;
+    padding-right: 5%; /* Adjust as needed */
+}
+
+#initialAmount, #inflationRate, #years, #principal, #interestRate, #payments, #compoundingFrequency,
+#initialDebt,#annualInterestRate,#monthlyPayment#income,#housing,#utilities,#groceries,#entertainment,#miscellaneous,#income {
+    border: 2px solid black; /* Add a black outline */
+    border-radius: 15px; /* Increase the border radius */
+}
+
+.header-content {
+    margin-bottom: 10px;
+    color: rgb(38, 30, 30);
+    text-align: center;
+    font-size: 2vmin
+}
+
+
+.Information {
+    line-height: 5em;
+    font-size: 2vmin
+}
+
+.Video{
+    text-align: center;
+    font-size: 4vmin;
+}
+
+/* quiz */
+
+.app {
+    background: white; 
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    border: 2px solid black; 
+    border-color: black;
+}
+
+.app h1{
+    font-weight: 25px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 2px solid;
+    padding-bottom: 30px;
+ 
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+}
+
+.btn{
+    background: white;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 2px solid black; /* Change the border color to black */
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 15px; /* Increase the border radius */
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background: black;
+    color: #fff;
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+    background: black;
+    color: white;
+    font-weight: 500;
+    width: 75px;
+    border: 0;
+    padding: 10px;
+    margin: 20px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct{
+    background-color: #9aeabc;
+}
+
+.incorrect{
+    background: #ff9393;
+}
+
