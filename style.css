@@ -603,6 +603,8 @@ h2 {
     align-items: center;
     height: 100%; 
 
+}
+
 
 .container {
     display: flex;
@@ -728,7 +730,10 @@ h2 {
     background: #ff9393;
 }
 
-border-radius: 15px; 
+
+.app {
+    background: white; 
+    width: 90%;
 }
 
 .header-content {
